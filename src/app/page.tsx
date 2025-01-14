@@ -8,7 +8,7 @@ import diceIcon from "../../public/images/icon-dice.svg"
 
 
 export default function Home() {
- const [advicePack, setAdvicePack] = useState([]);
+ const [advicePack, setAdvicePack] = useState({});
  const [isLoading, setIsLoading] = useState(false);
 
  const getAdvice = async () => {
@@ -33,7 +33,7 @@ useEffect( () => {
 
   return (
     <div className="w-full flex flex-col items-center justify-center">
-      <div className="rounded-2xl relative  w-[40%] bg-darkGrayishBlue flex flex-col justify-center items-center p-10">
+      <div className="rounded-2xl relative w-[80%]  md:w-[40%] bg-darkGrayishBlue flex flex-col justify-center items-center p-10">
         <div className="flex flex-col justify-center items-center gap-5 mb-12">
           {
             !isLoading ? (
